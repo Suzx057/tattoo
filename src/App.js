@@ -15,7 +15,10 @@ function App() {
     return <Tattooitem key={index} tattoo={tattoo}/>;
   });
 
-  
+  let tattoopost = null;
+  if(!!setSelectedTattoo) {
+    tattoopost = <Tattoopost tattoo={selectedTattoo}/>
+  }
 
   return (
     <div className="App">
@@ -26,7 +29,7 @@ function App() {
             {tattooElements}
       
         </div>
-        
+        <Tattoopost />
     </div>
   );
 }
